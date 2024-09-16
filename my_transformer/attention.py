@@ -44,5 +44,5 @@ class MultiHeadAttention(nn.Module):
         self.attention = ScaledDotProductAttention()
         self.fc = nn.Linear(n_heads * d_model, d_model)
     
-    def forward(self, x: torch.Tensor, mask: Optional[torch.Tensor] = None) -> torch.Tensor:
+    def forward(self, Q: torch.Tensor, K: torch.Tensor, V: torch.Tensor, mask: Optional[torch.Tensor] = None) -> torch.Tensor:
         #TODO
