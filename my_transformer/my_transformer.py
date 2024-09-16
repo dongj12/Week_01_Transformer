@@ -29,7 +29,7 @@ class Transformer(nn.Module):
         src_emb = self.dropout(src_emb)
         
         for layer in self.encoder_layers:
-            src_emb = layer(src_emb, src_mask)
+            src_emb = layer(src_emb)
         
         # Decoder
         tgt_emb = self.decoder_embedding(tgt) + self.position_embedding(tgt)
