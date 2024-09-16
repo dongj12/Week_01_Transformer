@@ -18,6 +18,5 @@ class TransformerEncoderLayer(nn.Module):
         self.residual1 = ResidualConnection()
         self.residual2 = ResidualConnection()
     
-    def forward(self, x: Tensor) -> Tensor:
-        mask = None
+    def forward(self, x: Tensor, mask: Optional[Tensor] = None) -> Tensor:
         #TODO
